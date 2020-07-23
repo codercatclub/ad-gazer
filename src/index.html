@@ -6,11 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="bundle.js"></script>
+  <style>
+    html {
+      position: absolute !important;
+    }
+
+    body {
+      overflow: auto !important;
+    }
+
+    .section {
+      height: 100vh;
+    }
+
+    .a-enter-vr-button {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="sections">
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+  </div>
   <a-scene renderer="colorManagement: true">
-    <a-assets>
+    <!-- <a-assets>
       <a-asset-item id="scene" src="assets/models/scene.glb"></a-asset-item>
       <a-asset-item id="box" src="assets/models/box.glb"></a-asset-item>
       <a-asset-item id="walk" src="assets/models/walk.glb"></a-asset-item>
@@ -21,10 +44,17 @@
 
     <a-entity gltf-part="src: #scene; part: pig" position="0 2 -3"></a-entity>
     <a-entity gltf-part="src: #scene; part: toy" position="2 0 -3"></a-entity>
-    <a-entity gltf-part="src: #scene; part: toy" material="shader: fresnel; color: '#5485ff'" position="-2 0 -3" ></a-entity>
+    <a-entity gltf-part="src: #scene; part: toy" material="shader: fresnel; color: '#5485ff'" position="-2 0 -3" ></a-entity> -->
 
-    <a-entity gltf-model="#box" position="4 0 -3" animation-mixer></a-entity>
-    <a-entity gltf-model="#walk" position="0 0 0" animation-mixer camera-animation></a-entity>
+    <!-- <a-entity gltf-model="#box" position="4 0 -3" animation-mixer></a-entity> -->
+    <!-- <a-entity gltf-model="#walk" position="0 0 0" animation-mixer camera-animation></a-entity> -->
+
+    <a-entity id="camera" position="0 0 1" camera="active: true" scroll></a-entity>
+
+    <a-entity text="
+      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.;
+      color: black;
+    "></a-entity>
   </a-scene>
 </body>
 
