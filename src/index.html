@@ -7,16 +7,47 @@
   <title>Document</title>
   <script src="bundle.js"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Open+Sans&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap');
+
     html {
       position: absolute !important;
     }
 
     body {
       overflow: auto !important;
+      color: rgb(131, 218, 255);
+    }
+
+    a-scene {
+      position: fixed;
+    }
+    .ui {
+      z-index: 99;
+      position: relative;
     }
 
     .section {
-      height: 100vh;
+      padding-top: 40px;
+      font-size: 35px;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .sections {
+      width: 40%;
+      margin: auto;
+      border-width: 10px;
+      padding: 40px 40px 40px 40px;
+      border-style: double;
+    }
+
+    h1 {
+      font-size: 105px;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-align: center;
+    }
+
+    footer {
+      height: 100px;
     }
 
     .a-enter-vr-button {
@@ -26,40 +57,92 @@
 </head>
 
 <body>
-  <div class="sections">
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
+  <div class="ui">
+    <h1>
+      R e a d M e
+    </h1>
+    <div class="sections">
+
+      <div class="section">
+        Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+        Lorem ipsum dolor sit amet, <u>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </u> laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, <b>sed do eiusmod tempor incididunt ut</b> ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+      <div class="section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </div>
+    </div>
+    <footer>
+    </footer>
   </div>
-  <a-scene renderer="colorManagement: true" background="color: #ff0088">
+
+  <a-scene renderer="colorManagement: true" background="color: #571aff">
     <a-assets>
       <img id="pic1" src="assets/textures/pic1.jpg"></img>
     </a-assets>
-    <!-- <a-sky color="#ECECEC"></a-sky> -->
-
-    <!-- <a-entity id="camera" camera="active: true"></a-entity>
-
-    <a-entity gltf-part="src: #scene; part: pig" position="0 2 -3"></a-entity>
-    <a-entity gltf-part="src: #scene; part: toy" position="2 0 -3"></a-entity>
-    <a-entity gltf-part="src: #scene; part: toy" material="shader: fresnel; color: '#5485ff'" position="-2 0 -3" ></a-entity> --> -->
-
-    <!-- <a-entity gltf-model="#box" position="4 0 -3" animation-mixer></a-entity> -->
-    <!-- <a-entity gltf-model="#walk" position="0 0 0" animation-mixer camera-animation></a-entity> -->
-
     <a-entity id="camera" position="0 0 1" camera="active: true" scroll></a-entity>
 
-    <a-entity text="
-      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.;
-      color: black;
-      font: 	https://cdn.aframe.io/fonts/SourceCodePro.fnt
-    "></a-entity>
-
-    <a-plane position="-1 0 0" scale="0.88 1.243 1" material="shader:flat; src: #pic1"></a-plane>
-
-    <!-- <a-plane position="1 0 0" scale="0.5 1 1"></a-plane> -->
+    <a-plane position="-1 0 0" scale="0.5 .95 1" material="shader:flat; src: #pic1"></a-plane>
     <a-plane position="1 0.25 0" scale="0.5 0.45 1"></a-plane>
     <a-plane position="1 -0.25 0" scale="0.5 0.45 1"></a-plane>
+
+    <a-plane position="-1 -.75 0" scale="0.5 0.45 1"></a-plane>
+    <a-plane position="-1 -1.25 0" scale="0.5 0.45 1"></a-plane>
+
+    <a-plane position="1 -1.5 0" scale="0.5 .95 1" material="shader:flat; src: #pic1"></a-plane>
 
   </a-scene>
 </body>
