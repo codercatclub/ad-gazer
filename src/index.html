@@ -32,19 +32,17 @@
     <div class="section"></div>
     <div class="section"></div>
   </div>
-  <a-scene renderer="colorManagement: true">
-    <!-- <a-assets>
-      <a-asset-item id="scene" src="assets/models/scene.glb"></a-asset-item>
-      <a-asset-item id="box" src="assets/models/box.glb"></a-asset-item>
-      <a-asset-item id="walk" src="assets/models/walk.glb"></a-asset-item>
+  <a-scene renderer="colorManagement: true" background="color: #ff0088">
+    <a-assets>
+      <img id="pic1" src="assets/textures/pic1.jpg"></img>
     </a-assets>
-    <a-sky color="#ECECEC"></a-sky>
+    <!-- <a-sky color="#ECECEC"></a-sky> -->
 
-    <a-entity id="camera" camera="active: true"></a-entity>
+    <!-- <a-entity id="camera" camera="active: true"></a-entity>
 
     <a-entity gltf-part="src: #scene; part: pig" position="0 2 -3"></a-entity>
     <a-entity gltf-part="src: #scene; part: toy" position="2 0 -3"></a-entity>
-    <a-entity gltf-part="src: #scene; part: toy" material="shader: fresnel; color: '#5485ff'" position="-2 0 -3" ></a-entity> -->
+    <a-entity gltf-part="src: #scene; part: toy" material="shader: fresnel; color: '#5485ff'" position="-2 0 -3" ></a-entity> --> -->
 
     <!-- <a-entity gltf-model="#box" position="4 0 -3" animation-mixer></a-entity> -->
     <!-- <a-entity gltf-model="#walk" position="0 0 0" animation-mixer camera-animation></a-entity> -->
@@ -54,7 +52,15 @@
     <a-entity text="
       value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.;
       color: black;
+      font: 	https://cdn.aframe.io/fonts/SourceCodePro.fnt
     "></a-entity>
+
+    <a-plane position="-1 0 0" scale="0.88 1.243 1" material="shader:flat; src: #pic1"></a-plane>
+
+    <!-- <a-plane position="1 0 0" scale="0.5 1 1"></a-plane> -->
+    <a-plane position="1 0.25 0" scale="0.5 0.45 1"></a-plane>
+    <a-plane position="1 -0.25 0" scale="0.5 0.45 1"></a-plane>
+
   </a-scene>
 </body>
 
