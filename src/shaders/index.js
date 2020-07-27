@@ -1,12 +1,9 @@
-import FresnelVert from './FresnelVert.glsl';
-import FresnelFrag from './FresnelFrag.glsl';
+import PicVert from './PicVert.glsl';
+import PicFrag from './PicFrag.glsl';
 
-export const Fresnel = {
+export const Pic = {
   schema: {
-    color: { type: 'color', is: 'uniform', default: 'red' },
-    timeMsec: { type: 'time', is: 'uniform' },
-    displacementScale: { type: 'float', is: 'uniform', default: 0.01 },
   },
-  vertexShader: FresnelVert,
-  fragmentShader: FresnelFrag,
+  vertexShader: PicVert,
+  fragmentShader: PicFrag,
 };
