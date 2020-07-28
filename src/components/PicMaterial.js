@@ -51,10 +51,10 @@ export default {
     //   return;
     // };
     //check if collision
-    if(window.eyeData)
+    if(window.eyeQuadrant != null)
     {
       // check if eye is in 1st or 3st section
-      let v = Math.floor(window.eyeData.x/(window.innerWidth/4));
+     let v = window.eyeQuadrant;
       if((v > 2 && this.side < 0) || (v < 1 && this.side > 0))
       {
         this.colorMag = Math.min(this.colorMag + 0.0001 * timeDelta, 1);
@@ -71,10 +71,10 @@ export default {
     {
       let m = clampT + 1;
       this.picMaterial.uniforms.force.value = this.side * m*m;
-      this.picMaterial.uniforms.pos.value = 2.0*this.side * (1.0 - m*m);
+      this.picMaterial.uniforms.pos.value = 2.0*this.side * (1.25 - m*m);
     } else {
       let m = 1 - clampT;
-      this.picMaterial.uniforms.pos.value = 0;
+      this.picMaterial.uniforms.pos.value = 2.0*this.side * (1.1 - 1);
       this.picMaterial.uniforms.force.value = this.side * m*m;
       this.picMaterial.uniforms.noiseMag.value = m;
     }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <!-- <div id="myModal" class="modal">
+<!-- <div id="myModal" class="modal">
     <div class="modal-content">
       <p>Procede</p>
     </div>
@@ -27,6 +27,7 @@
     a-scene {
       position: fixed;
     }
+
     .ui {
       z-index: 99;
       position: relative;
@@ -40,7 +41,7 @@
     }
 
     .sections {
-      width: 40%;
+      width: 650px;
       margin: auto;
       border-width: 10px;
       padding: 40px 40px 40px 40px;
@@ -51,6 +52,7 @@
       font-size: 105px;
       font-family: 'Source Sans Pro', sans-serif;
       text-align: center;
+      margin-bottom: 40px;
     }
 
     p {
@@ -72,89 +74,95 @@
     .calibrationDiv {
       z-index: 99;
       position: fixed;
+      padding-left: 300px;
+      padding-right: 300px;
+      /* visibility: hidden; */
     }
 
-    .Calibration{
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    background-color: rgb(131, 218, 255);
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    position:fixed;
+    .Calibration {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background-color: rgb(131, 218, 255);
+      border-color: rgb(255, 255, 255);
+      border-style: solid;
+      position: fixed;
     }
 
-    #Pt1{
-        top: 70px;
-        left:340px;
-    }
-    #Pt2{
-        top: 70px;
-        left:50vw;
-        margin-left: 340;
-    }
-    #Pt3{
-        top: 70px;
-        right:2vw;
-    }
-    #Pt4{
-        top:50vh;
-        left:2vw;
-    }
-    #Pt5{
-        top: 50vh;
-        left: 50vw;
-    }
-    #Pt6{
-        top: 50vh;
-        right:2vw;
-    }
-    #Pt7{
-        bottom:2vw;
-        left: 2vw;
-    }
-    #Pt8{
-        bottom:2vw;
-        left:50vw;
-    }
-    #Pt9{
-        bottom:2vw;
-        right:2vw;
+    #Pt1 {
+      top: 2vw;
+      left: 340px;
     }
 
-    /* The Modal (background) */
-    .modal {
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    #Pt2 {
+      top: 2vw;
+      left: 50vw;
+      margin-left: 340;
     }
 
-    /* Modal Content/Box */
-    .modal-content {
-      background-color:#351299;
-      margin: 15% auto; /* 15% from the top and centered */
-      border: 4px solid rgb(131, 218, 255);
-      width: 20%; /* Could be more or less, depending on screen size */
+    #Pt3 {
+      top: 2vw;
+      right: 2vw;
+    }
+
+    #Pt4 {
+      top: 50vh;
+      left: 2vw;
+    }
+
+    #Pt5 {
+      top: 50vh;
+      left: 50vw;
+    }
+
+    #Pt6 {
+      top: 50vh;
+      right: 2vw;
+    }
+
+    #Pt7 {
+      bottom: 2vw;
+      left: 2vw;
+    }
+
+    #Pt8 {
+      bottom: 2vw;
+      left: 50vw;
+    }
+
+    #Pt9 {
+      bottom: 2vw;
+      right: 2vw;
+    }
+
+    .loseScreen {
+      z-index: 99;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
     }
   </style>
 </head>
 
 <body>
   <script src="assets/webgazer.js"></script>
+  <div class="loseScreen">
+    <h1>
+      you lose
+    </h1>
+    <p class="loseText">
+    </p>
+  </div>
   <div class="calibrationDiv">
     <h1>
       callibration
     </h1>
     <p>
-      Please wait for your video feed to appear, and then click each button 6 times while focusing your gaze on the button.
+      Please wait for your video feed to appear, and then click each button 6 times while focusing your gaze on the
+      button.
     </p>
     <input type="button" class="Calibration" id="Pt1"></input>
     <input type="button" class="Calibration" id="Pt2"></input>
@@ -174,92 +182,130 @@
     <div class="sections">
 
       <div class="section">
-        Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
-        Lorem ipsum dolor sit amet, <u>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </u> laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        The following is an excerpt from Attention in Advertising by Mike Vito and Louis Perrotta.<br><br>
+        Gaze and attention constitute two essential parts of print advertising. The task of finding out how people look
+        at an advertisement, what catches viewers’ attention most quickly, and what makes a product look most desirable
+        to a magazine or newspaper reader can be daunting for marketing executives. Luckily for them, an understanding
+        of the science behind visual perception can prove to be a great tool of the trade.
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+
+        The role of images in advertising can be better understood when we study certain phenomena related to gaze and
+        attention. One important concept is that of attention itself. It is said to be an orienting response to a
+        stimulus signifying that the stimulus has made contact with a sense organ (Clark 70). One function of attention
+        is to regulate the amount of additional processing effort a stimulus receives (Clark 70). Obviously, paying
+        closer attention involves more processing effort.
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, <b>sed do eiusmod tempor incididunt ut</b> ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        Additional perspective on visual attention can be found in the work of Dr. Edward Titchener, whose laws of
+        attention provide a good synopsis of basic knowledge regarding attention. The laws state that attention, which
+        is unstable in itself, can be varied at will to change the clarity of sensory representations. This means one
+        can choose to focus on specific things to make them more clearly accessible to the mind. According to Titchener,
+        the area of focus and what is outside of it are the only two levels of attention, so focusing on one image leads
+        to a decrease in the clarity of all other images. The mind is also found to be attentive enough to remember
+        images shown only for a brief period (Wright 18-19).
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        Another necessary aspect of attention and advertising is iconicity, which describes the fact that pictures
+        recreate the kinds of visual information that our eyes and brains make use of when we look at the real world
+        (Messaris 7). According to Paul Messaris, Iconicity does not have to entail a complete surface similarity
+        between a picture and reality as long as the picture reproduces visual cues that we use in real world vision.
+        This concept is not confined to just to the content of images but can also be characteristic of their formal or
+        stylistic qualities (Messaris 54).
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        In other words, we expect pictures to verify our conception of the world. This is why, when a picture violates
+        reality, it draws our attention so effectively. For an example, one can examine an advertisement for the liquor
+        brand Level. The ad depicts a bottle balancing on a shaker in a position where the bottle would obviously fall
+        in reality. Unexpectedly, the bottle stays where it is, violating the laws of gravity. Unnatural depictions such
+        as this give rise to what is known as a “conceptual conflict,” in which a strange and surprising set of
+        circumstances in an advertisement brings uncertainty to the reader, requiring more cognitive energy to
+        understand. This promotes better attention because the confusion must be resolved in order to understand the ad,
+        and the work done by the mind promotes better memory of the answer (East 45). The Level ad turned out to be one
+        of the more popular of our experiment, giving the argument some legitimacy.
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        Besides conceptual conflict, marketers also make use of archetypes in their advertising. Archetypes use
+        culturally shared meanings in order to engage the audience and impart ideas (East 50). As an example, a
+        depiction of a flawless woman would appeal to common notions of beauty and assist the viewer in associating
+        positive affect with the product.
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        Another tendency of viewers is to respond well to a spokesperson or model staring directly outward, seeming to
+        look into the viewers’ eyes or reach into the viewer’s “real” space (Messaris 145). People tend to be especially
+        responsive to the eyes and mouth, which they normally look at during everyday interaction with their peers
+        (Messaris 146). Greater perceived proximity has been shown to increase attention and involvement with
+        advertisements (Messaris 29).
       </div>
       <div class="section">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        These facts about attention bring us to the question of how psychology and attention affect companies’
+        advertising strategy. Physically attractive spokespeople and designs, high contrast, a concentrated area of
+        focus, and the occasional violation of the laws of physics are often seen in today’s advertisements, as
+        evidenced by a casual look through a popular magazine. The question remains unanswered as to which of them
+        people value more, and how much is appropriate for selling a product. To some extent, this depends on the target
+        demographic. However, we undertook research in an effort to find if any generalities could be made.
+      </div>
+      <div class="section">
+        The aim of a study by Mike Vito and Louis Perrotta was to find out what people generally focus on most when they
+        see advertisements, in this case for alcohol. Twenty-one college-aged participants, fifteen male and six female,
+        were used. Viewers were brought to a special room, where they were told to look at a variety of advertisements
+        with an eye-tracking machine set up in front of them. After filling out a short survey about previous experience
+        with alcohol, they were then shown some alcohol advertisements on a large screen in three separate groups of
+        seven each...
+        If you made it here and you want to know how their research unfolds, congratulations. Congratulations for not
+        fueling the ads with your attention. Being aware of tactics being used and that may be used in the future
+        will help us maintain our identities. <br> <br> Please check out the full piece at
+        https://www1.icsi.berkeley.edu/ ~stellayu/artvis/project/ad/index.html.
       </div>
     </div>
     <footer>
     </footer>
   </div>
 
-  <a-scene renderer="colorManagement: true" background="color: #571aff" visible= true>
+  <a-scene renderer="colorManagement: true" background="color: #571aff" visible=true>
     <a-assets>
       <img id="pic1" src="assets/textures/pic1.jpg"></img>
       <img id="fat" src="assets/textures/fat.jpg"></img>
       <img id="gum" src="assets/textures/gum.jpg"></img>
       <img id="pic2" src="assets/textures/pic2.jpg"></img>
       <img id="playboy" src="assets/textures/playboy.jpg"></img>
+      <img id="nike" src="assets/textures/nike.jpg"></img>
+      <img id="glossier2" src="assets/textures/glossier2.jpg"></img>
+      <img id="smoothie" src="assets/textures/smoothie.jpg"></img>
+      <img id="ikea" src="assets/textures/ikea.jpg"></img>
+      <img id="aa" src="assets/textures/aa.jpg"></img>
+      <img id="pimple" src="assets/textures/pimple.jpg"></img>
+      <img id="gp" src="assets/textures/gp.jpg"></img>
     </a-assets>
     <a-entity id="camera" position="0 0 1" gazer camera="active: true" scroll></a-entity>
 
-    <a-plane segments-height="10" segments-width="10" position="-1 0 0" scale="0.5 .95 1" pic-material="map: #pic1"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="1 0.25 0" scale="0.5 0.45 1" pic-material="map: #pic2"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="1 -0.25 0" scale="0.5 0.45 1" pic-material="map: #pic2"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 0 0" scale="0.5 .95 1" pic-material="map: #pic1">
+    </a-plane>
+    <a-plane segments-height="10" segments-width="10" position="1 -0.25 0" scale="0.5 0.45 1"
+      pic-material="map: #smoothie"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 -3.25 0" scale="0.5 0.45 1"
+      pic-material="map: #pic2"></a-plane>
 
-    <a-plane segments-height="10" segments-width="10" position="-1 -.75 0" scale="0.5 0.45 1" pic-material="map: #pic2"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="-1 -1.25 0" scale="0.5 0.45 1" pic-material="map: #pic2"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 -1.25 0" scale="0.5 0.45 1"
+      pic-material="map: #ikea"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 -.75 0" scale="0.5 0.45 1"
+      pic-material="map: #glossier2"></a-plane>
 
-    <a-plane segments-height="10" segments-width="10" position="1 -1.5 0" scale="0.5 .95 1" pic-material="map: #fat"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="1 -2.5 0" scale="0.5 .95 1" pic-material="map: #gum"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="-1 -2.5 0" scale="0.5 .95 1" pic-material="map: #playboy"></a-plane>
-    <a-plane segments-height="10" segments-width="10" position="1 -3.5 0" scale="0.5 .95 1" pic-material="map: #pic1"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="1 -1.5 0" scale="0.5 .95 1" pic-material="map: #nike">
+    </a-plane>
+    <a-plane segments-height="10" segments-width="10" position="1 -2.5 0" scale="0.5 .95 1" pic-material="map: #fat">
+    </a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 -2.5 0" scale="0.5 .95 1"
+      pic-material="map: #playboy"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="1 -3.5 0" scale="0.5 .95 1" pic-material="map: #pic1">
+    </a-plane>
+
+    <a-plane segments-height="10" segments-width="10" position="-1 -5.0 0" scale="0.5 .95 1"
+      pic-material="map: #pimple"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="-1 -5.75 0" scale="0.5 .45 1"
+      pic-material="map: #aa"></a-plane>
+    <a-plane segments-height="10" segments-width="10" position="1 -5.25 0" scale="0.5 .95 1" pic-material="map: #gp">
+    </a-plane>
 
   </a-scene>
 </body>

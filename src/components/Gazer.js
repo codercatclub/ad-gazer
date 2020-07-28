@@ -9,30 +9,29 @@ export default {
     var localstorageLabel = 'webgazerGlobalData';
     window.localStorage.setItem(localstorageLabel, null);
     webgazer.setRegression('ridge')
-    .setTracker('clmtrackr')
-    .begin()
-    .showPredictionPoints(true);
+      .setTracker('clmtrackr')
+      .begin()
+      .showPredictionPoints(true);
 
     webgazer.params.showVideo = false;
     window.applyKalmanFilter = true;
     webgazer.setGazeListener(this.collisionEyeListener);
     window.onbeforeunload = function () {
       webgazer.end();
-      // window.localStorage.clear();
+      window.localStorage.clear();
     }
 
-
+    window.msInAds = 0;
+    this.isLoser = false;
     //get setup for tracking
     let calibButtons = document.querySelectorAll("input.Calibration");
     this.calibResp = {}
     calibButtons.forEach((b) => {
       this.calibResp[b.id] = 0;
       b.onclick = () => {
-        if(window.eyeData != null)
-        {
-          this.calibResp[b.id] ++;
-          if(this.calibResp[b.id] > 5)
-          {
+        if (window.eyeData != null) {
+          this.calibResp[b.id]++;
+          if (this.calibResp[b.id] > 5) {
             b.style.backgroundColor = "pink"
           }
         }
@@ -42,21 +41,38 @@ export default {
 
   collisionEyeListener: function (data) {
     window.eyeData = data;
+    if (data == null) return;
+    let eyeQuadrant = Math.floor(window.eyeData.x / (window.innerWidth / 4));
+    window.eyeQuadrant = eyeQuadrant;
+
+    if (window.doneCalibrating && (eyeQuadrant < 1 || eyeQuadrant > 2)) {
+      window.msInAds += window.timeDelta;
+    }
   },
 
   tick: function (time, timeDelta) {
-    if(this.doneCalibrating) return;
+    window.timeDelta = timeDelta;
+    if (window.doneCalibrating) {
+      if (window.msInAds > 5000 && !this.isLoser) {
+        this.isLoser = true;
+        // show lose screen
+        this.el.sceneEl.setAttribute("visible", "false");
+        document.querySelector("div.loseScreen").style.visibility = "visible";
+        document.querySelector("p.loseText").innerText = Math.round(window.msInAds / 1000) + " seconds of your time was spent feuling ads :("
+        document.querySelector("div.ui").style.visibility = "hidden";
+        window.scrollTo(0, 0);
+      }
+      return;
+    };
     // Do something on every scene tick or frame.
     let doneCalibrating = true;
     Object.keys(this.calibResp).forEach((key) => {
-      if(this.calibResp[key] <= 5)
-      {
+      if (this.calibResp[key] <= 5) {
         doneCalibrating = false;
       }
     })
-    if(doneCalibrating)
-    {
-      this.doneCalibrating = true;
+    if (doneCalibrating) {
+      window.doneCalibrating = true;
       document.querySelector("div.ui").style.visibility = "visible";
       document.querySelector("div.calibrationDiv").style.visibility = "hidden";
       this.el.sceneEl.setAttribute("visible", "true");
