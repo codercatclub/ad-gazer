@@ -32,7 +32,7 @@ export default {
         if (window.eyeData != null) {
           this.calibResp[b.id]++;
           if (this.calibResp[b.id] > 5) {
-            b.style.backgroundColor = "pink"
+            b.style.backgroundColor = "rgb(131, 218, 255)"
           }
         }
       }
@@ -79,8 +79,10 @@ export default {
       window.scrollTo(0, 0);
       webgazer.params.showFaceOverlay = false;
       webgazer.params.showFaceFeedbackBox = false;
+      webgazer.params.showGazeDot = false;
       document.getElementById("webgazerFaceOverlay").style.display = 'none';
       document.getElementById("webgazerFaceFeedbackBox").style.display = 'none';
+      document.getElementById("webgazerGazeDot").style.display = 'none';
     }
   },
 }
