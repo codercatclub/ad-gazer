@@ -37,6 +37,22 @@ export default {
         }
       }
     });
+    this.tanFOV = Math.tan( ( ( Math.PI / 180 ) * 75 / 2 ) );
+    this.windowHeight = 800; 
+    window.addEventListener( 'resize', this.onWindowResize, false );
+    this.mainCamera = document.querySelector('#camera');
+    this.mainCamera.addEventListener('object3dset', (evt) => {
+      this.camera = evt.target.object3D.children[0];
+      this.onWindowResize();
+    });
+  },
+
+  onWindowResize: function(data) {
+    if(this.camera)
+    {
+      this.camera.fov = ( 360 / Math.PI ) * Math.atan( this.tanFOV * ( window.innerHeight / this.windowHeight ) );
+      this.camera.updateProjectionMatrix();
+    }
   },
 
   collisionEyeListener: function (data) {
@@ -51,6 +67,7 @@ export default {
   },
 
   tick: function (time, timeDelta) {
+
     window.timeDelta = timeDelta;
     if (window.doneCalibrating) {
       if (window.msInAds > 5000 && !this.isLoser) {
