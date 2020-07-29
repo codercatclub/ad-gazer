@@ -37,12 +37,16 @@ export default {
         }
       }
     });
+    
     this.tanFOV = Math.tan( ( ( Math.PI / 180 ) * 75 / 2 ) );
     this.windowHeight = 800; 
-    window.addEventListener( 'resize', this.onWindowResize, false );
+    
+    window.addEventListener( 'resize', () => {
+      this.onWindowResize();
+    }, false );
     this.mainCamera = document.querySelector('#camera');
     this.mainCamera.addEventListener('object3dset', (evt) => {
-      this.camera = evt.target.object3D.children[0];
+      this.camera = evt.target.object3D.children[0]
       this.onWindowResize();
     });
   },
@@ -67,7 +71,6 @@ export default {
   },
 
   tick: function (time, timeDelta) {
-
     window.timeDelta = timeDelta;
     if (window.doneCalibrating) {
       if (window.msInAds > 5000 && !this.isLoser) {
