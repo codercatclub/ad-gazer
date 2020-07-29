@@ -103,6 +103,7 @@ export default {
       document.getElementById("webgazerFaceOverlay").style.display = 'none';
       document.getElementById("webgazerFaceFeedbackBox").style.display = 'none';
       document.getElementById("webgazerGazeDot").style.display = 'none';
+      this.onWindowResize();
     }
   },
 }
